@@ -26,9 +26,8 @@
  *
  */
 function getComposition(f,g) {
-    return f(g);
+    throw new Error('Not implemented');
 }
-
 
 /**
  * Returns the math power function with the specified exponent

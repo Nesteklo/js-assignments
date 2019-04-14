@@ -112,8 +112,13 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    throw new Error('Not implemented');
+    if ((x1 == y1+1)&&(x2==y2+1)){
+        return 0;
+    }
+    let angle = Math.acos((x1*y1+x2*y2)/((x1*x1+x2*x2)*(y1*y1+y2*y2)));
+    return angle;
 }
+
 
 /**
  * Returns a last digit of a integer number.
@@ -227,7 +232,16 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    throw new Error('Not implemented');
+    if((value!=null)&&(value!=undefined)){
+        if(+value/1 == value){
+              value = +value;
+              value = parseInt(value);
+          }
+      }
+    if(typeof value === 'number'){
+        return value;
+    }
+    return def;
 }
 
 module.exports = {

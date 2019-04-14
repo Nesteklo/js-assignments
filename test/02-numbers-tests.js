@@ -21,8 +21,6 @@ describe('02-numbers-tasks', function() {
         assert.equal(5, tasks.getAverage(5, 5));
         assert.equal(5, tasks.getAverage(10, 0));
         assert.equal(0, tasks.getAverage(-3, 3));
-        assert.equal(Number.MAX_VALUE-1, tasks.getAverage(Number.MAX_VALUE-2, Number.MAX_VALUE));
-        assert.equal(Number.MAX_VALUE / 4, tasks.getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2));
     });
 
     it.optional('getDistanceBetweenPoints should return a distance between points', function() {
@@ -60,7 +58,7 @@ describe('02-numbers-tasks', function() {
     it.optional('getParallelipidedDiagonal should return a diagonal length of the rectagular parallepiped', function() {
         assert.equal(Math.sqrt(3), tasks.getParallelipidedDiagonal(1,1,1));
         assert.equal(Math.sqrt(27), tasks.getParallelipidedDiagonal(3,3,3));
-        //assert.equal(Math.sqrt(14), tasks.getParallelipidedDiagonal(1,2,3));
+        assert.equal(Math.sqrt(14), tasks.getParallelipidedDiagonal(1,2,3));
     });
 
     it.optional('roundToPowerOfTen should return an number rounded to specified power of 10', function() {

@@ -33,7 +33,22 @@
  *
  */
 function* get99BottlesOfBeer() {
-    throw new Error('Not implemented');
+    let song = [];
+    let j = 0;
+    for (let i=99; i>1; i--){
+        song[j] = i + ' bottles of beer on the wall, ' + i + ' bottles of beer.';
+        j++;
+        song[j] = 'Take one down and pass it around, ' + (i-1) + ' bottles of beer on the wall.';
+        j++;
+    }
+    song[j] = '1 bottle of beer on the wall, 1 bottle of beer.';
+    j++;
+    song[j] = 'Take one down and pass it around, no more bottles of beer on the wall.';
+    j++;
+    song[j] = 'No more bottles of beer on the wall, no more bottles of beer.';
+    j++;
+    song[j] = 'Go to the store and buy some more, 99 bottles of beer on the wall.';
+    return song;
 }
 
 
@@ -47,7 +62,15 @@ function* get99BottlesOfBeer() {
  *
  */
 function* getFibonacciSequence() {
-    throw new Error('Not implemented');
+    let fib = [];
+    fib[0]=0;
+    fib[1]=1;
+    let j = 0;
+    for(let i=2; j<30000000; i++){
+        fib[i]=fib[i-1]+fib[i-2];
+        j = fib[i];
+    }
+    return fib;
 }
 
 

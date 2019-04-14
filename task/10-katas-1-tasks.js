@@ -131,13 +131,19 @@ function canDominoesMakeRow(dominoes) {
  *
  * @example
  *
- * [ 0, 1, 2, 3, 4, 5 ]   => '0-5'
+ * [ 0, 1, 2, 3, 4, 5]   => '0-5'
  * [ 1, 4, 5 ]            => '1,4,5'
  * [ 0, 1, 2, 5, 7, 8, 9] => '0-2,5,7-9'
  * [ 1, 2, 4, 5]          => '1,2,4,5'
  */
 function extractRanges(nums) {
     throw new Error('Not implemented');
+    /*let str = nums[0]+'';
+    for(let i=0; i<nums.length; i++){
+        if ((nums[i+1]-nums[i]) > 1){
+            str = str + '-' + nums
+        }
+    }*/
 }
 
 module.exports = {
